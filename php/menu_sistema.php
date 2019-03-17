@@ -1,5 +1,5 @@
 <?php
-include('php/controle_sistema.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +54,7 @@ include('php/controle_sistema.php');
                         <img src="imagens/perfil.png" alt="usuario_sistema" />
                     </div>
                     <div class="linha">
-                        <span class="nome_usuario">Boa noite<small>Cristina Nazario</small></span>
+                        <span class="nome_usuario">Boa noite<small><?php echo $_SESSION["name"]; ?></small></span>
                     </div>
 
                     <nav id="menu_sistema">

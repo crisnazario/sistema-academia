@@ -9,17 +9,15 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="lib/js/jquery.js"></script>
-    <script src="lib/js/controle_interface.js"></script>
-    <script src="lib/js/func_controle.js"></script>
     <script src="js/config.js"></script>
 </head>
-<body>
+<body onload="initialize()">
 
-    <!-- <div class='alerta_fundo'> 
+    <div class='alerta_fundo'> 
         <div class='mensagem sucesso'>
             <span class='texto_msg'>Login realizado com sucesso</span>
         </div>
-    </div> -->
+    </div>
 
     <div class="formulario_login">
         <div class="conter_formulario">

@@ -2,7 +2,7 @@
 
 class dataBase
 {
-    private $host = 'lcalhost';
+    private $host = 'localhost';
     private $usuario = 'root';
     private $senha = "";
     private $database = "academia";

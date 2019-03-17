@@ -1,23 +1,30 @@
+function initialize()
+{
+  $(".alerta_fundo").hide();
+}
+
+
 function auth()
 {
-    var log = document.getElementById('usuario').value;
-    var pass = document.getElementById('senha').value;
+  var user = $('#usuario').val();
+  var password = $('#senha').val();
 
-    if(log == "" || pass == "")
-    {
-        alert("Preencha todos os campos");
-    }
-    else
-    {
-      $.ajax({
-          type: "POST",
-          url: 'php_config/config.php/?p=auth',
-          data: "logon="+log+"&password="+pass,
-          success: function(data)
-          {
-            console.log(data);
-          }
-      })
-    }
+  if(user == "" || password == "")
+  {
+    alert("Preencha todos os campos");
+  }
+  else
+  {
+    $.ajax({
+            type: "POST",
+            url: 'php_config/controller.php/?p=auth',
+            data: "user="+user+"&password="+password,
+            success: function(data)
+            {
+              window.location.href = data;
+              //console.log(data);
+            }
+          })
+  }
         
 }
