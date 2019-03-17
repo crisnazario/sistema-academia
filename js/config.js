@@ -1,13 +1,27 @@
-function initialize()
+//Verifica o turno 
+function time()
 {
-  $(".alerta_fundo").hide();
+  let today = new Date();
+  let time = today.getHours();
+  
+  if(time >= 0 && time < 12)
+  {
+    document.getElementById("status_time").innerHTML = "Bom dia";
+  }
+  else if(time >= 12 && time < 18)
+  {
+    document.getElementById("status_time").innerHTML = "Boa tarde";
+  }
+  else
+  {
+    document.getElementById("status_time").innerHTML = "Boa noite";
+  }
 }
-
 
 function auth()
 {
-  var user = $('#usuario').val();
-  var password = $('#senha').val();
+  let user = $('#usuario').val();
+  let password = $('#senha').val();
 
   if(user == "" || password == "")
   {

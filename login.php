@@ -11,13 +11,13 @@
     <script src="lib/js/jquery.js"></script>
     <script src="js/config.js"></script>
 </head>
-<body onload="initialize()">
+<body>
 
-    <div class='alerta_fundo'> 
+    <!-- <div class='alerta_fundo'> 
         <div class='mensagem sucesso'>
             <span class='texto_msg'>Login realizado com sucesso</span>
         </div>
-    </div>
+    </div> -->
 
     <div class="formulario_login">
         <div class="conter_formulario">

@@ -15,11 +15,10 @@ session_start();
         <link rel="stylesheet" href="lib/js/jqueryui/jquery-ui.css">
         <script src="lib/js/jquery.js"></script>
         <script src="lib/js/jqueryui/jquery-ui.js"></script>
-        <script src="lib/js/controle_interface.js"></script>
-        <script src="lib/js/func_controle.js"></script>
+        <script src="js/config.js"></script>
 
     </head>
-    <body>
+    <body onload="time()">
 
     <!-- <div class='alerta_fundo'> 
         <div class='mensagem sucesso'>
@@ -54,7 +53,7 @@ session_start();
                         <img src="imagens/perfil.png" alt="usuario_sistema" />
                     </div>
                     <div class="linha">
-                        <span class="nome_usuario">Boa noite<small><?php echo $_SESSION["name"]; ?></small></span>
+                        <span class="nome_usuario"><label id="status_time"></label><small><?php echo $_SESSION["name"]; ?></small></span>
                     </div>
 
                     <nav id="menu_sistema">
