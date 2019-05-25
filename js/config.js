@@ -22,12 +22,8 @@ function auth()
 {
   let user = $('#usuario').val();
   let password = $('#senha').val();
-
-  if(user == "" || password == "")
-  {
-    alert("Preencha todos os campos");
-  }
-  else
+  
+  if(checkEmptyField(user) && checkEmptyField(password))
   {
     $.ajax({
             type: "POST",
@@ -35,10 +31,49 @@ function auth()
             data: "user="+user+"&password="+password,
             success: function(data)
             {
-              window.location.href = data;
-              //console.log(data);
+              if(checkEmptyField(data))
+                window.location.href = data;
+              else
+                console.log("Mensagem de senha/login incorreta");
             }
           })
   }
+  else
+    {
+      formattingField(returnValueField('usuario'), 'usuario', 200);
+      formattingField(returnValueField('senha'), 'senha', 200);
+    }
+  
         
+}
+
+function checkEmptyField(field)
+{
+  if(field == "")
+    return false;
+  else
+    return true;
+}
+
+function formattingField(val, campo, tempo)
+{
+  setTimeout(function()
+  {     
+    if(!checkEmptyField(val))
+    {       
+      $("#"+campo).css({ "border-color": "red"});  
+      return false;
+    }
+    else
+    {
+      $("#"+campo).css({ "border-color": "#DCDCDC"});     
+      return true;  
+    }         
+  }, tempo)
+}
+
+function returnValueField(id)
+{
+  let field = $("#"+id).val();
+  return field;
 }

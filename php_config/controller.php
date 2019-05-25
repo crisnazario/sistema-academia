@@ -6,10 +6,13 @@ include_once('inc_conexao.php');
 
     $page = isset($_GET['p'])?$_GET['p']:'';
 
-    if($page == 'auth')
-    {            
-        $data = $model->auth($_POST['user'], $_POST["password"]);        
+    switch($page)
+    {
+        case 'auth':
+            $data = $model->auth($_POST['user'], $_POST["password"]); 
+        break;
     }
+
     
 
 

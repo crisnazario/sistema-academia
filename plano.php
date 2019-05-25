@@ -44,7 +44,7 @@
                                             <div class="divisao_campo">
                                                 <select class="campo_sistema" name="termino_dia_semana">
                                                     <option value="Domingo">Domingo</option>
-                                                    <option value="Segunda">>Segunda</option>
+                                                    <option value="Segunda">Segunda</option>
                                                     <option value="Terça">Terça</option>
                                                     <option value="Quarta">Quarta</option>
                                                     <option value="Quinta">Quinta</option>
