@@ -13,11 +13,15 @@
 </head>
 <body>
 
-    <!-- <div class='alerta_fundo'> 
+    <div class='alerta_fundo'> 
         <div class='mensagem sucesso'>
             <span class='texto_msg'>Login realizado com sucesso</span>
         </div>
-    </div> -->
+    </div>
+    
+    <div class="container_load">
+        <div class="load"></div>
+    </div>
 
     <div class="formulario_login">
         <div class="conter_formulario">

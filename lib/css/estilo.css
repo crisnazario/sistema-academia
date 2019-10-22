@@ -1964,3 +1964,30 @@ select
     display: block;
     font-weight: 300;
 }
+
+.container_load
+{
+    position:fixed;
+    top:0%;
+    left:0%;
+    right:0%;
+    bottom:0;
+    z-index:9999;
+    height:100%;
+    width:100%;
+    position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: center;
+}
+
+.load
+{
+    width:920px;
+    height:532px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-266px 0 0 -460px;
+    background:url(../../imagens/load.gif) center no-repeat;
+    background-size: 10%;
+}

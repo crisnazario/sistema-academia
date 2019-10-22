@@ -4,6 +4,7 @@ session_start();
 
 class Model
 {
+    //Realiza login
     function auth($username, $password)
     {
             $bd = new dataBase();
@@ -12,21 +13,21 @@ class Model
             $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password' ";
             $query = mysqli_query($conect, $sql);
 
+            $return_value = '';
             while($data = $query->fetch_assoc())
             {
                 if($data > 0)
                 {
                     $_SESSION["id"] = $data['id'];
                     $_SESSION["name"] = $data['name'];
-                    $result = 'tela_principal.php';
-                    echo $result;
+                    $return_value = 'tela_principal.php';
                 }
                 else
                 {
-                    $query = "erro";
-                    echo (json_encode($query));
+                    $query = "erro";                   
                 }                
-            }     
+            } 
+            return $return_value;            
     }
 
 }
