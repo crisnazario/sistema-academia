@@ -5,12 +5,12 @@
                     <h1 class="titulo_formulario">Administrar Clientes</h1>
                     
                     <div class="envelope_formulario">
-                        <form method="POST" action="php/controle_sistema.php?f=cadastrarCliente" id="formulario" enctype="multipart/form-data">
+                        <form method="POST" id="formulario" enctype="multipart/form-data">
                             <div class="linha">
                                 <div class="esquerda_update">
                                     <h3 class="titulo_sub_sub_formulario">Foto do perfil</h3>
                                     <img src="imagens/mini_img_anuncio.jpg" alt= "mini_img_plano" class="mini_foto_anuncio" id="mini_foto_anuncio" name="mini_foto_anuncio" />
-                                    <input type="file" class="update_arquivo" id="anexar_arquivo"  name="anexar_arquivo" onchange="visualizar_img(this,'mini_foto_anuncio');" />
+                                    <input type="file" class="update_arquivo" id="anexar_arquivo"  name="anexar_arquivo"/>
                                 </div>
 
                                 <div class="direita_update">
@@ -63,6 +63,7 @@
                                             <div class="divisao_campo">
                                                 <label class="label_sistema" for="sexo_cadastrado">Sexo</label>
                                                 <select class="campo_sistema" id="sexo_cadastrado" name="sexo_cadastrado">
+                                                    <option value="0">Selecione o sexo</option>
                                                     <option value="Masculino">Masculino</option>
                                                     <option value="Feminino">Feminino</option>
                                                 </select>
@@ -78,8 +79,9 @@
                                             <div class="divisao_campo">
                                                 <label class="label_sistema" for="situacao_cadastrado">Situação</label>
                                                 <select class="campo_sistema" id="situacao_cadastrado" name="situacao_cadastrado">
+                                                    <option value="">Selecione a situação</option>
                                                     <option value="Masculino">Ativo</option>
-                                                    <option value="Feminino">Desativado</option>
+                                                    <option value="Feminino">Inativo</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -92,6 +94,7 @@
                                             <div class="divisao_campo">
                                                 <label class="label_sistema" for="permissao_cadastrado">Permissão</label>
                                                 <select class="campo_sistema" id="permissao_cadastrado" name="permissao_cadastrado">
+                                                    <option value="">Selecione o tipo de permissão</option>
                                                     <option value="Administrador">Administrador</option>
                                                     <option value="Aluno">Aluno</option>
                                                 </select>

@@ -13,8 +13,9 @@ session_start();
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" href="lib/js/jqueryui/jquery-ui.css">
-        <script src="lib/js/jquery.js"></script>
+        <script src="lib/js/jquery.js"></script>        
         <script src="lib/js/jqueryui/jquery-ui.js"></script>
+        <script src="js/jquery.mask.js"></script>
         <script src="js/config.js"></script>
 
     </head>
