@@ -106,35 +106,8 @@ $(document).ready(function() {
     //Login
     $(".container_load, .alerta_fundo").css('display', 'none');
 
-    $('#nascimento_cadastrado').mask('00/00/0000');
-    $('#cpf_cadastrado').mask('000.000.000-00', {reverse: true});
+    $("#cadastrar").click(function () {
+    console.log("Oppa");
+});
 })
 
-//Verifica email
-function checkEmail(email)
-{
-    if(email != "")
-    {
-        var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-        if(filtro.test(email))
-            return true;
-        else
-           return false;
-    }
-    else 
-        return false;  
-}
-
-//Cadastro de aluno
-function register()
-{
-    if (checkEmptyField(returnValueField('primeiro_nome_cadastrado')) && checkEmptyField(returnValueField('sobrenome_cadastrado')) 
-        && checkEmptyField(returnValueField('usuario_cadastrado')) && checkEmptyField(returnValueField('senha_cadastrado')) && 
-        checkEmptyField(returnValueField('email_cadastrado')) && checkEmptyField(returnValueField('cpf_cadastrado')) 
-        && checkEmptyField(returnValueField('rg_cadastrado')) && checkEmptyField(returnValueField('sexo_cadastrado')) 
-        && checkEmptyField(returnValueField('nascimento_cadastrado')) && checkEmptyField(returnValueField('situacao_cadastrado')) 
-        && checkEmptyField(returnValueField('permissao_cadastrado')))
-        alert("Foi");
-    else
-        alert("Não");
-}

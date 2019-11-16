@@ -5,7 +5,7 @@
                     <h1 class="titulo_formulario">Administrar Clientes</h1>
                     
                     <div class="envelope_formulario">
-                        <form method="POST" id="formulario" enctype="multipart/form-data">
+                      
                             <div class="linha">
                                 <div class="esquerda_update">
                                     <h3 class="titulo_sub_sub_formulario">Foto do perfil</h3>
@@ -121,12 +121,11 @@
                                         </div>
 
                                         <div class="linha">
-                                            <button type="submit" class="botao botao_azul" name="cadastrar">Cadastrar</button>
+                                            <button class="botao botao_azul" id="teste">Cadastrar</button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </div>                        
                     </div>
                     <br>
 
